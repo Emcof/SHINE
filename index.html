@@ -145,9 +145,12 @@
     }
 
   .profile-right {
-      text-align: right;              /* 사진 및 연락처 오른쪽 정렬 */
-      margin-left: 20px;
-    }
+  text-align: left; /* 사진 및 연락처 왼쪽 정렬 */
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column; /* 세로로 정렬 */
+  align-items: flex-start; /* 왼쪽 정렬 */
+}
  .profile-photo {
       width: 150px;
       height: 170px;
@@ -158,7 +161,8 @@
     }
 
     .profile-info {
-      margin-top: 20px;
+    margin-top: 20px;
+    text-align: left; /* 이메일, 전화번호 왼쪽 정렬 */
     }
 
     .profile-info p {
