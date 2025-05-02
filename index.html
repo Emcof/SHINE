@@ -24,6 +24,7 @@
       flex-direction: column;
       padding: 20px;
       margin-left: 50px;
+      position: relative; /* 하트를 오른쪽에 배치하기 위한 설정 */
     }
 
     /* 배경 이미지 설정 */
@@ -54,19 +55,21 @@
       color: #333;
     }
 
-    /* 서울대학교 부분 텍스트 색을 검은색으로 변경 */
+    /* "서울대학교 졸업생을 위한 검증된 Social Network" 문구는 블러 효과를 제거하고 선명하게 처리 */
     header p {
-      color: black; /* 검은색 */
+      color: black;
+      font-size: 1.2em; /* 크기 조정 */
+      font-weight: bold;
+      text-shadow: none; /* 블러 효과 제거 */
     }
 
-    /* INSTA 하이퍼링크 색을 노란색으로 변경 */
     a {
-      color: yellow; /* 노란색 */
-      text-decoration: none; /* 밑줄 제거 */
+      color: yellow;
+      text-decoration: none;
     }
 
     a:hover {
-      text-decoration: underline; /* 호버 시 밑줄 표시 */
+      text-decoration: underline;
     }
 
     h2, p, .project-title {
@@ -93,6 +96,16 @@
     .project p {
       font-size: 1.1em;
     }
+
+    /* 하트를 실시간 회원수 섹션 반 크기만큼 크게 설정 */
+    .heart {
+      position: absolute;
+      top: 10px; /* 위치 조정 */
+      right: 10px; /* 오른쪽에 배치 */
+      font-size: 5em; /* 크기를 키움 */
+      color: red;
+    }
+
   </style>
 </head>
 <body>
@@ -132,6 +145,9 @@
       <p>Email: emcofAA@gmail.com</p>
       <p>Phone: 010-7276-7201</p>
     </section>
+
+    <!-- 하트 표시 -->
+    <div class="heart">❤️</div>
   </div>
 </body>
 </html>
