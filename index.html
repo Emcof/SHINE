@@ -11,42 +11,40 @@
       color: white;
       height: 100%;
       display: flex;
-      justify-content: flex-start; /* 왼쪽에 콘텐츠 정렬 */
-      align-items: flex-start; /* 상단에 정렬 */
-      background-attachment: fixed; /* ✅ 배경 고정 */
-      overflow: auto; /* ✅ 스크롤 가능 */
+      justify-content: flex-start;
+      align-items: flex-start;
+      background-attachment: fixed;
+      overflow: auto;
       position: relative;
-     
     }
 
     /* 오른쪽 섹션 배치 */
     .right-section {
       display: flex;
-      flex-direction: column; /* 세로로 정렬 */
+      flex-direction: column;
       padding: 20px;
-      margin-left: 50px; /* 왼쪽에 여백 추가 */
+      margin-left: 50px;
     }
 
     /* 배경 이미지 설정 */
     body::before {
       content: '';
       position: absolute;
-  
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background-image: url('https://emcof.github.io/SHINE/image.jpg'); /* 이미지 경로 */
+      background-image: url('https://emcof.github.io/SHINE/image.jpg');
       background-size: cover;
       background-position: center;
-      opacity: 1; /* 배경의 투명도 조절 */
-      z-index: -1; /* 배경이 뒤로 가도록 설정 */
+      opacity: 1;
+      z-index: -1;
     }
 
     header {
       margin-bottom: 40px;
       padding: 20px;
-      background: rgba(255, 255, 255, 0.7); /* 반투명 배경을 추가해 텍스트 가독성 증가 */
+      background: rgba(255, 255, 255, 0.7);
       border-radius: 10px;
       z-index: 1;
     }
@@ -55,18 +53,35 @@
       font-size: 2.5em;
       color: #333;
     }
+
+    /* 서울대학교 부분 텍스트 색을 검은색으로 변경 */
+    header p {
+      color: black; /* 검은색 */
+    }
+
+    /* INSTA 하이퍼링크 색을 노란색으로 변경 */
+    a {
+      color: yellow; /* 노란색 */
+      text-decoration: none; /* 밑줄 제거 */
+    }
+
+    a:hover {
+      text-decoration: underline; /* 호버 시 밑줄 표시 */
+    }
+
     h2, p, .project-title {
       color: white;
-      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9); /* ✅ 추가 */
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.9);
     }
+
     section {
-     margin-bottom: 30px;
-      background: rgba(0, 0, 0, 0.4); /* ✅ 추가 */
+      margin-bottom: 30px;
+      background: rgba(0, 0, 0, 0.4);
       padding: 20px;
       border-radius: 10px;
       z-index: 1;
     }
-  
+
     .project {
       margin-bottom: 10px;
     }
@@ -75,7 +90,6 @@
       font-weight: bold;
     }
 
-    /* 기타 스타일 */
     .project p {
       font-size: 1.1em;
     }
@@ -120,3 +134,4 @@
     </section>
   </div>
 </body>
+</html>
