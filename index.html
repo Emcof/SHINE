@@ -24,7 +24,8 @@
       flex-direction: column;
       padding: 20px;
       margin-left: 50px;
-      position: relative; /* 하트를 오른쪽에 배치하기 위한 설정 */
+      position: relative; /* 헤더와 섹션들 배치 */
+      z-index: 1;
     }
 
     /* 배경 이미지 설정 */
@@ -97,11 +98,12 @@
       font-size: 1.1em;
     }
 
-    /* 하트를 실시간 회원수 섹션 반 크기만큼 크게 설정 */
+    /* 하트를 오른쪽 중앙에 배치 */
     .heart {
       position: absolute;
-      top: 10px; /* 위치 조정 */
+      top: 50%; /* 중앙에 위치 */
       right: 10px; /* 오른쪽에 배치 */
+      transform: translateY(-50%); /* 수직으로 정확히 중앙에 맞추기 */
       font-size: 5em; /* 크기를 키움 */
       color: red;
     }
@@ -124,7 +126,7 @@
       <h2>실시간 회원 수</h2>
       <div class="project">
         <p class="project-title">📁 인스타</p>
-        <p><a href="https://www.instagram.com/songmugwang?igsh=MXFwZW5yM3Jpc3RsNw%3D%3D&utm_source=qr" target="_blank">각종 문의사항, 지원 현항 등은 DM을 통해 문의 주세요 </a></p>
+        <p><a href="https://www.instagram.com/songmugwang?igsh=MXFwZW5yM3Jpc3RsNw%3D%3D&utm_source=qr" target="_blank">실시간 매칭현황, 문의사항 등은 DM으로 문의주세요 ~</a></p>
       </div>
       <div class="project">
         <p class="project-title">📁 스누매치 시스템 설명</p>
@@ -141,13 +143,19 @@
     </section>
 
     <section>
-      <h2>연락처</h2>
+      <h2>Management team Profile PM1</h2>
       <p>Email: emcofAA@gmail.com</p>
       <p>Phone: 010-7276-7201</p>
+      <p>서울대학교 공과대학 기계항공공학부/ 서초구 청년정책위원/ 93년생/ 정복자</p>
+      <h2>Management team Profile PM2</h2>
+      <p>Email: ???????????????</p>
+      <p>Phone: 010-????-????</p>
+      <p>공석 / 공석 / 공석/ 공석 </p>
+      
     </section>
-
-    <!-- 하트 표시 -->
-    <div class="heart">❤️</div>
   </div>
+
+  <!-- 하트 표시 -->
+  <div class="heart">❤️</div>
 </body>
 </html>
