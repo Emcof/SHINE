@@ -134,32 +134,36 @@
   position: relative;
 }
 
-.profile-container {
-  display: flex;
-  align-items: center;  /* 사진과 텍스트가 수평으로 정렬되도록 */
-  flex-direction: column; /* 사진과 정보가 세로로 배치되도록 */
-  text-align: center;
-}
+ .profile-container {
+      display: flex;
+      justify-content: space-between;  /* 왼쪽과 오른쪽에 내용 배치 */
+      align-items: flex-start;         /* 세로로 상단 정렬 */
+    }
+  .profile-left {
+      flex: 1;
+      text-align: left;               /* 약력 정보 왼쪽 정렬 */
+    }
 
+  .profile-right {
+      text-align: right;              /* 사진 및 연락처 오른쪽 정렬 */
+      margin-left: 20px;
+    }
  .profile-photo {
-  width: 150px; /* 1.5배 가로 */
-  height: 170px; /* 1.5배 세로 */
-  object-fit: cover; /* 이미지 채우기 */
-  object-position: top; /* 상단을 중심으로 보여주기 */
-  border: 3px solid black; /* 검은 테두리 */
-  border-radius: 5px; /* 네모 스타일 */
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  z-index: 10;
-}
-.profile-info {
-  margin-top: 20px; /* 사진과 정보 간 간격을 줍니다 */
-}
+      width: 150px;
+      height: 170px;
+      object-fit: cover;
+      object-position: top;
+      border: 3px solid black;
+      border-radius: 5px;
+    }
 
-.profile-info p {
-  margin: 5px 0;
-}
+    .profile-info {
+      margin-top: 20px;
+    }
+
+    .profile-info p {
+      margin: 5px 0;
+    }
   </style>
 </head>
 <body>
@@ -204,22 +208,27 @@
   </div>
 
   <!-- 전체 너비 하단 섹션 -->
-  <section class="profile-section">
-<div class="profile-box">
-  <h2>C Level</h2>
-  <div class="profile-container">
-    <img src="https://emcof.github.io/BESHINES/pf1image.jpg" alt="증명사진" class="profile-photo">
-    <div class="profile-info">
-      <p>SONG MU GWANG</p>
-      <p> - 서울대학교 공과대학 기계항공공학부</p>
-      <p> - (現)서초구 청년정책위원</p>
-      <p> - (現)산업기술평가원 평가위원</p>
-      <p> - BESHINES CEO</p>
-      <p>Email: emcofAA@gmail.com</p>
-      <p>Phone: 010-7276-7201</p>
+ <section class="profile-section">
+    <div class="profile-box">
+      <h2>C Level</h2>
+      <div class="profile-container">
+        <div class="profile-left">
+          <p>SONG MU GWANG</p>
+          <p> - 서울대학교 공과대학 기계항공공학부</p>
+          <p> - (現)서초구 청년정책위원</p>
+          <p> - (現)산업기술평가원 평가위원</p>
+          <p> - BESHINES CEO</p>
+        </div>
+
+        <div class="profile-right">
+          <img src="https://emcof.github.io/BESHINES/pf1image.jpg" alt="증명사진" class="profile-photo">
+          <div class="profile-info">
+            <p>Email: emcofAA@gmail.com</p>
+            <p>Phone: 010-7276-7201</p>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
 
     <div class="profile-box">
       <h2>Management Team</h2>
