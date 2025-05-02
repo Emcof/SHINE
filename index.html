@@ -124,15 +124,22 @@
     box-sizing: border-box;
   }
 
-  .profile-box {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 10px;
-    color: white;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
-    position: relative; /* 증명사진 위치를 위한 기준 */
-  }
+.profile-box {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+  position: relative;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;  /* 사진과 텍스트가 수평으로 정렬되도록 */
+  flex-direction: column; /* 사진과 정보가 세로로 배치되도록 */
+  text-align: center;
+}
 
  .profile-photo {
   width: 150px; /* 1.5배 가로 */
@@ -146,7 +153,13 @@
   right: 20px;
   z-index: 10;
 }
+.profile-info {
+  margin-top: 20px; /* 사진과 정보 간 간격을 줍니다 */
+}
 
+.profile-info p {
+  margin: 5px 0;
+}
   </style>
 </head>
 <body>
@@ -192,18 +205,21 @@
 
   <!-- 전체 너비 하단 섹션 -->
   <section class="profile-section">
-   <div class="profile-box">
-    <h2>C Level</h2>
+<div class="profile-box">
+  <h2>C Level</h2>
+  <div class="profile-container">
     <img src="https://emcof.github.io/BESHINES/pf1image.jpg" alt="증명사진" class="profile-photo">
-    <p>SONG MU GWANG</p>
-    <p> - 서울대학교 공과대학 기계항공공학부
-    <p> - (現)서초구 청년정책위원
-    <p> - (現)산업기술평가원 평가위원
-    <p> - BESHINES CEO </p>
-    <p> <p/>
-    <p>Email: emcofAA@gmail.com</p>
-    <p>Phone: 010-7276-7201</p>
-   </div>
+    <div class="profile-info">
+      <p>SONG MU GWANG</p>
+      <p> - 서울대학교 공과대학 기계항공공학부</p>
+      <p> - (現)서초구 청년정책위원</p>
+      <p> - (現)산업기술평가원 평가위원</p>
+      <p> - BESHINES CEO</p>
+      <p>Email: emcofAA@gmail.com</p>
+      <p>Phone: 010-7276-7201</p>
+    </div>
+  </div>
+</div>
 
     <div class="profile-box">
       <h2>Management Team</h2>
