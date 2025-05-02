@@ -13,6 +13,8 @@
       display: flex;
       justify-content: flex-start; /* 왼쪽에 콘텐츠 정렬 */
       align-items: flex-start; /* 상단에 정렬 */
+      background-attachment: fixed; /* ✅ 배경 고정 */
+      overflow: auto; /* ✅ 스크롤 가능 */
       position: relative;
       overflow: hidden;
     }
@@ -29,8 +31,7 @@
     body::before {
       content: '';
       position: absolute;
-      background-attachment: fixed; /* ✅ 배경 고정 */
-      overflow: auto; /* ✅ 스크롤 가능 */
+  
       top: 0;
       left: 0;
       right: 0;
