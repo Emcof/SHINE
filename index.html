@@ -11,8 +11,7 @@
       color: white;
       height: 100%;
       display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
+      flex-direction: column;
       background-attachment: fixed;
       overflow: auto;
       position: relative;
@@ -24,8 +23,9 @@
       flex-direction: column;
       padding: 20px;
       margin-left: 50px;
-      position: relative; /* 헤더와 섹션들 배치 */
+      position: relative;
       z-index: 1;
+      max-width: 900px;
     }
 
     /* 배경 이미지 설정 */
@@ -56,12 +56,11 @@
       color: #333;
     }
 
-    /* "서울대학교 졸업생을 위한 검증된 Social Network" 문구는 블러 효과를 제거하고 선명하게 처리 */
     header p {
       color: black;
-      font-size: 1.2em; /* 크기 조정 */
+      font-size: 1.2em;
       font-weight: bold;
-      text-shadow: none; /* 블러 효과 제거 */
+      text-shadow: none;
     }
 
     a {
@@ -101,11 +100,33 @@
     /* 하트를 오른쪽 중앙에 배치 */
     .heart {
       position: absolute;
-      top: 50%; /* 중앙에 위치 */
-      right: 10px; /* 오른쪽에 배치 */
-      transform: translateY(-50%); /* 수직으로 정확히 중앙에 맞추기 */
-      font-size: 10em; /* 크기를 2배로 키움 */
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      font-size: 10em;
       color: red;
+    }
+
+    /* 전체 폭을 쓰는 하단 인물 소개 섹션 */
+    .profile-section {
+      display: flex;
+      justify-content: space-around;
+      gap: 20px;
+      padding: 40px 60px;
+      background: rgba(0, 0, 0, 0.6);
+      border-top: 2px solid rgba(255,255,255,0.2);
+      border-radius: 10px 10px 0 0;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .profile-box {
+      flex: 1;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 10px;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
     }
 
   </style>
@@ -115,25 +136,23 @@
     <header>
       <h1>DONT BE SHY, JUST BE SHINE</h1>
       <p>서울대학교 졸업생을 위한 검증된 Social Network / SNULoveLink</p>
-
-  
     </header>
 
     <section>
       <h2>소개</h2>
       <p>여러분의 불같은 연애를 응원합니다.</p>
-      <P>-문제점</P>
-       <P>1. 샤이 고객의 니즈르 충족시키지 못함</P>
-       <P>2. 검증 시스템 부재로인한 불안</P> 
-       <P>3. 동문만남을 추구하는 반면 샤랑방이라는 다소 가벼운 매체에 대한 걱정이 있음</P>
-       <P>4. 셀소의 간편화 추구 </P>
-      <P>-해결</P>
-       <P>1. 개인정보에 대한 공개를 제한할 수 있음</P> 
-       <P>2. 학사 검증은 반드시 해야됨 </P>
-       <P>3. 재직, 재산, 외모 등의 검증시 점수를 차등 부여함 </P>
-       <P>4. 신청자에게 통일된 셀소양식을 제공 -> 향후 피드백을 통한 양식 개선</P>
-       <P>5. 샤랑방에서 광고는 하되 궁극적으로 지인의 지인을 통해 서울대 학부졸업생 사용자 확보-> 온라인이라는 이미지 탈피</P>
-       <P>6. 결혼 정보회사의 느낌보다는 조금 가볍게/ 서울대 출신이 운영한다는 이미지/ 소개팅 주선 비영리 단체의 느낌</P>
+      <p>-문제점</p>
+      <p>1. 샤이 고객의 니즈르 충족시키지 못함</p>
+      <p>2. 검증 시스템 부재로인한 불안</p> 
+      <p>3. 동문만남을 추구하는 반면 샤랑방이라는 다소 가벼운 매체에 대한 걱정이 있음</p>
+      <p>4. 셀소의 간편화 추구</p>
+      <p>-해결</p>
+      <p>1. 개인정보에 대한 공개를 제한할 수 있음</p> 
+      <p>2. 학사 검증은 반드시 해야됨</p>
+      <p>3. 재직, 재산, 외모 등의 검증시 점수를 차등 부여함</p>
+      <p>4. 신청자에게 통일된 셀소양식을 제공 → 향후 피드백을 통한 양식 개선</p>
+      <p>5. 샤랑방에서 광고는 하되 궁극적으로 지인의 지인을 통해 서울대 학부졸업생 사용자 확보 → 온라인이라는 이미지 탈피</p>
+      <p>6. 결혼 정보회사의 느낌보다는 조금 가볍게 / 서울대 출신이 운영한다는 이미지 / 소개팅 주선 비영리 단체의 느낌</p>
     </section>
 
     <section>
@@ -144,7 +163,7 @@
       </div>
       <div class="project">
         <p class="project-title">📁 스누매치 시스템 설명</p>
-        <p> MBTI, 관심분야, 취미, 별자리, 직업, 이상형 등 요소 및 정량화된 지표를 통한 검증 및 추천 시스템  .</p>
+        <p>MBTI, 관심분야, 취미, 별자리, 직업, 이상형 등 요소 및 정량화된 지표를 통한 검증 및 추천 시스템.</p>
       </div>
       <div class="project">
         <p class="project-title">📁 남자 지원</p>
@@ -155,27 +174,35 @@
         <p>들어오세요~</p>
       </div>
     </section>
+  </div>
 
-    <section>
-      <h2>C Level </h2>
-      <p>SONG MU GWANG </p>
-      <p>Email: emcofAA@gmail.com</p>
-      <p>Phone: 010-7276-7201</p>
-      <p>서울대학교 공과대학 기계항공공학부/ (現) 서초구 청년정책위원/ (前) 관악구 청년정책위원 / (現) 정글마이</p>
-     
+  <!-- 전체 너비 하단 섹션 -->
+  <section class="profile-section">
+    <div class="profile-box">
+    <h2>C Level</h2>
+    <img src="https://emcof.github.io/SHINE/pf1image.jpg" alt="증명사진" class="profile-photo">
+    <p>SONG MU GWANG</p>
+    <p>Email: emcofAA@gmail.com</p>
+    <p>Phone: 010-7276-7201</p>
+    <p>서울대학교 공과대학 기계항공공학부 / (現) 서초구 청년정책위원 / (前) 관악구 청년정책위원 / (現) 정글마이</p>
+    </div>
+
+    <div class="profile-box">
       <h2>Management Team</h2>
       <p>PM1 - </p>
       <p>Email: ???????????????</p>
       <p>Phone: 010-????-????</p>
-      <p>공석 / 공석 / 공석/ 공석 </p>
+      <p>공석 / 공석 / 공석 / 공석</p>
+    </div>
 
+    <div class="profile-box">
       <h2>Operating Team</h2>
       <p>PM2 - </p>
       <p>Email: ???????????????</p>
       <p>Phone: 010-????-????</p>
-      <p>공석 / 공석 / 공석/ 공석 </p>
-    </section>
-  </div>
+      <p>공석 / 공석 / 공석 / 공석</p>
+    </div>
+  </section>
 
   <!-- 하트 표시 -->
   <div class="heart">❤️</div>
