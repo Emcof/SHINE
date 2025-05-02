@@ -130,16 +130,17 @@
     position: relative; /* 증명사진 위치를 위한 기준 */
   }
 
-  .profile-photo {
+ .profile-photo {
+  width: 150px; /* 1.5배 가로 */
+  height: 225px; /* 1.5배 세로 */
+  object-fit: cover; /* 이미지 채우기 */
+  object-position: top; /* 상단을 중심으로 보여주기 */
+  border: 3px solid black; /* 검은 테두리 */
+  border-radius: 5px; /* 네모 스타일 */
   position: absolute;
-  top: 15px;
-  right: 15px;
-  width: 105px; /* 70px × 1.5 */
-  height: 105px; /* 70px × 1.5 */
-  border-radius: 8px; /* 살짝 둥근 네모 */
-  object-fit: cover;
-  border: 2px solid white;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+  top: 10px;
+  right: 20px;
+  z-index: 10;
 }
 
   </style>
